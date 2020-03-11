@@ -1,0 +1,50 @@
+<!DOCKTYPE html>
+
+<html lang="pt-br">
+	<head>
+	
+		<meta charset = "utf-8"/>
+		<title>Pagina inicial</title>
+		<link rel="stylesheet" href="../css/cadastroCSS.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	</head>
+	
+	<body>
+	<div class="container">
+		<header>
+			<div class= "banner">
+				<b>Cadastro</b>
+				<a href = "../index.html" class= "btn-1">voltar</a>
+			</div>
+		</header>
+	
+		<nav>
+			<center>
+				<div class = "formulario">
+					<form action="../php/salva.php" method="post">
+						<div class="dados">
+							Nome:       <input name="nome"		type="text" 		placeholder="nome" required ><br>
+							Apelido:	<input name="apelido"	type="text" 		placeholder="apelido"  ><br>
+							Tel.Celular:<input name="celular"	type="text" 		placeholder="celular"  autofocus><br>
+							Tel.Fixo:   <input name="fixo"		type="text" 		placeholder="fixo"  autofocus><br>
+							Email:      <input name="email"		type="email"			placeholder="email"  autofocus><br>
+										<a><input type="submit" value="Cadastrar"	class="btn-2"/></a>
+										<a><input type="reset" 	value="Limpar"	 	class="btn-2"/></a>
+						</div>
+					</form>
+				</div>
+			</center>
+		</nav>
+	
+		<footer>
+				
+		</footer>
+	</div>
+	
+	</body>
+	
+	
+	
+</html>
+	
+

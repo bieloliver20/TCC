@@ -1,0 +1,239 @@
+.container {
+	max-width: 1128px;
+	margin: 0 auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*Resetando os valores de espaçamento */
+ * {
+ margin: 0;
+ padding: 0;
+ }
+ 
+.clearfix {
+	*zoom: 1;
+}
+
+img,
+picture,
+video,
+embed {
+	max-width: 100%;
+	height: 100%;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+header {
+	width: 100%;
+	height: 50px;
+	margin-bottom: 1.6em;
+}
+
+section {
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+}
+
+.left{
+	float: left;
+	border: 2px solid lightgrey;
+}
+
+.right{
+	float:right;
+	border: 2px solid lightgrey;
+}
+.coluna {
+	width: 100%; /* 264px / 1128px*/
+	margin-right: 2%; /* 24 / 1128px*/
+	float: left;
+	margin-bottom: 1.0em;
+}
+
+.coluna:last-child {
+	margin-right: 0;
+}
+
+.banner {
+	background: url('../img/banner.jpg');
+	height: 250px;
+	margin-bottom: 4.8em;
+	position: relative;
+	background-size: 100% 100%;
+}
+
+footer {
+	width: 100%;
+	height: 15px;
+	margin-top: 7.4em;
+	margin-bottom: 1.4em;
+	float: left;
+	clear: both;
+	background: lightgray;
+}
+
+/*Estilizando a nav da classe menu */
+ .menu {
+	 width: 100%;
+	 height: 35px;
+	 background-color: #222;
+	 font-family: Arial;
+ }
+
+/*Estilizando as listas */
+ .menu ul {
+	 list-style: none;
+	 position: relative;
+ }
+
+.menu ul li {
+	 width: 33%;
+	 float: left;
+ }
+
+.menu a {
+	 padding-top: 10px;
+	 display: block;
+	 text-decoration: none;
+	 text-align: center;
+	 justify-content: center;
+	 background-color: #222;
+	 color: #fff;
+ }
+
+
+.menu a:hover {
+	 color: #555;
+	 text-decoration: underline;
+ }
+
+.menu ul ul li {
+	 float: none;
+	 border-bottom: solid 1px #ccc;
+ }
+
+.menu ul ul li a {
+	background-color: #069;
+ }
+
+@media screen and (max-width: 1128px) {
+	.container {
+		padding: 0 2.4em 0 2.4em;
+	}
+	
+	.coluna {
+		width: 100%;
+		margin-bottom: 1.0em;
+	}
+	
+	.right{
+		float: left;
+		width:100%;
+	}
+	
+	.left{
+		float:left;
+		width:100%;
+		margin-bottom: 1.0em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	
+	.coluna {
+		width: 100%;
+		margin-bottom: 1.0em;
+	}
+	
+	.right{
+		float: left;
+		width:100%;
+	}
+	
+	.left{
+		float:left;
+		width:100%;
+		margin-bottom: 1.0em;
+	}
+	
+	.menu{
+	 width: 100%;	
+	 margin-top: 5px;
+	 transition: all .4s;
+	 }
+	  
+	.menu ul li {
+	 width: 30%;
+	 float: left;
+	 }  
+	 }
+}
+
+@media screen and (max-width: 718px) {
+	.btn {
+		width: 80px;
+	}
+
+	.banner {
+	   position: relative;
+	   margin: 0;
+	   height: 150px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.menu {
+	   width: 100%;
+	}
+	
+}
+
+@media screen and (max-width: 520px) {
+	.menu ul li {
+	 width: 100%;
+	 float: left;
+	 }
+
+	nav{
+		width: 70%;
+	}
+	
+	.coluna {
+	   width: 100%;
+	   margin-right: 0;
+	}
+	
+	.banner {
+	   position: relative;
+	   float: left;
+	   height: 50px;
+	   width: 100%;
+	   margin-top: 1.0em;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.menu ul li {
+	 width: 100%;
+	 float: left;
+	 }
+	
+	.banner {
+		margin-top: 1.0em;
+	}
+}
