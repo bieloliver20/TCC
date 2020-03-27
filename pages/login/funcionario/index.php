@@ -10,13 +10,13 @@
 		
 		<?php
 			include "./../conexao.php";
-			$resultsArray = array();
-			$resultQuery = $conn->query("SELECT * FROM servico");
-			while ($linha = mysqli_fetch_object($resultQuery)) { 
-				$resultsArray[] = $linha;
+			$resultsArray = array(); //Transforma a variavel em array
+			$resultQuery = $conn->query("SELECT * FROM servico"); //Traz as informações do banco pra essa variavel
+			while ($linha = mysqli_fetch_object($resultQuery)) { //Transforma as informações do banco em objetos e manda pra uma variavel
+				$resultsArray[] = $linha; //Dps de ter transformado a variavel em array, joga as informações da variavel na variavel de array
 			}
-			$servicosJson = json_encode($resultsArray);
-			echo "<script>let servicosJson = $servicosJson;</script>";
+			$servicosJson = json_encode($resultsArray); //Pega a variavel array e transforma ela em codigo json e manda pra outra variavel
+			echo "<script>let servicosJson = $servicosJson;</script>"; //Abre o script pra criar uma variavel no js e ele recebe a variavel do php q tem o json
 		?>
 
 		<script src="./js/selectServicos.js"></script>
@@ -25,7 +25,7 @@
 				if(document.getElementById(id).style.display == 'block'){
 				document.getElementById(id).style.display = 'none';
 			}else { document.getElementById(id).style.display = 'block';
-document.getElementById(a).style.display = 'none';  document.getElementById(b).style.display = 'none';  document.getElementById(c).style.display = 'none'; 				}
+				document.getElementById(a).style.display = 'none';  document.getElementById(b).style.display = 'none';  document.getElementById(c).style.display = 'none'; 				}
 			}
 		</script>
     </head>
@@ -137,9 +137,9 @@ document.getElementById(a).style.display = 'none';  document.getElementById(b).s
 							<fieldset class="infoForm">
 							<legend> Dados do Serviço </legend>
 								<label> Serviço </label>
-									<div id="selectsServicos">
-										<select idServico="" class="select select-first"></select>
-										<button type="button" id="addService" style="font-size:20pt">+</button>
+									<div id="selectsServicos"> <!--ID para mexer nos selects-->
+										<select idServico="" class="select select-first"></select>  <!--classe para poder mostrar os selects, e o que aparece primeiro--> 
+										<button type="button" id="addService" style="font-size:20pt">+</button>  <!--Butao pra adicionar mais serviços-->
 									</div>
 									<br>
 									<br>
